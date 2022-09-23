@@ -1,0 +1,255 @@
+/* css reset */
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth;
+    
+}
+body{
+    min-height: 400vh;
+    background: linear-gradient(90deg, #dde3eb 0% , white 100%);
+    z-index: -1;
+}
+
+/* css variables */
+:root{
+    --navbar-height:40px;
+}
+/* navbar */
+#navbar{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    position:static;
+    top:0;
+}
+/* navbar:- logo and images */
+#logo{
+    margin:15px 30px;
+}
+#logo img{
+    width: 8vh;
+    height:9vh;
+    filter: invert(100%);
+}
+/* navbar list */
+#navbar ul{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height:60%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.1;
+
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.4rem;
+}
+#navbar ul li a{
+    color:white;
+    display:block;
+    padding: 5px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Bree Serif', serif;
+}
+#navbar ul li a:hover{
+    background-color:white;
+    color:black;
+    transition: all 0.3s ease-in-out;
+}
+/* home section:- background image */
+#home{
+    display:flex;
+    flex-direction: column;
+    padding:5px 100px;
+    justify-content: center;
+    align-items: center;
+    height:80vh;
+
+}
+#home::before{
+    content: "";
+    background:url('./d2.jpg') no-repeat center center/cover;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    z-index: -1;
+    opacity:1;
+}
+
+#home h1{
+    font-size: 6rem;
+    margin-top: -10%;
+}
+#home p{
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* service section */
+#services{
+    margin-top:5%;
+    display:flex;
+}
+#services .box{
+    /* border:2px solid white; */
+    background-color: rgb(231, 231, 231);
+    box-shadow: 5px 5px 15px black;
+    padding:3px;
+    margin:5px;
+    font-family:'Baloo Bhai 2', cursive ;
+
+}
+#services .box img{
+    height:100px;
+    display: block;
+    margin:auto;
+
+}
+#services .box img:hover{   
+    box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+   
+}
+#client-section{
+    height: 300px;
+}
+#client-section::before{
+    content:"";
+    position: absolute;
+    background: url('./img1.jpg') no-repeat center center/cover;
+    width:100%;
+    height:41%;
+    z-index: -1;
+    opacity:0.50;
+}
+#clients{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#clients img{
+    width:200px;
+    height:90px;
+    padding: 0px 15px;
+    
+}
+.client-item{
+    padding:15px;
+    margin:23px;
+
+}
+/* contact-section */
+#contact{
+    position: relative;
+
+}
+#contact::before{
+    content:"";
+    position:absolute;
+    background: url('./contact.jpg') no-repeat center center/cover;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.60;
+}
+#contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 34px;
+}
+#contact-box form{
+    width:30%;
+    font-size: 1.5rem;
+
+}
+#contact-box input,textarea{
+    width:100%;
+    padding:0.5rem;
+    border-radius: 20px;
+    font-size: 1.1rem;
+
+}
+.form-group{
+
+}
+.youtube-video{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    margin-top: 1%;
+    /* margin-right: 5%; */
+}
+.youtube-video h1{
+    font-size: 3rem;
+    margin-left: 3%; 
+}
+.youtube-video p{
+    margin-left: 3%;
+    float: left;
+}
+footer{
+    background: #252525;
+    color:white;
+    margin-top: 3%;
+    height: 35vh;
+    display: flex;
+    flex-direction:column-reverse ;
+    align-items: center;
+    justify-content:baseline;
+}
+/* utility class */
+.h-primary{
+    text-align: center;
+    color:white;
+    font-size: 4.8rem;
+    margin-top:3%;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.h-primary.center{
+    text-align: center;
+    color:black;
+    font-size: 3rem;
+    padding:12px;
+    font-family: 'Bree Serif', serif;
+}
+.h-secondry{
+    font-size: 2.2rem;
+    padding:15px;
+    color:black;
+    font-family: 'Bree Serif', serif;
+}
+.btn{
+    padding:6px 20px;
+    border:2px solid gray;
+    color:gray;
+    background-color:white;
+    margin:20px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.btn:hover{
+color:white;
+background-color: gray;
+transition: all 0.5s ease;
+}
+.center{
+    text-align: center;
+}
